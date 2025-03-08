@@ -3,7 +3,7 @@ This repository is the official implementation of INS-MMBench: A Comprehensive B
 
 ## Introduction
 INS-MMBench is the first comprehensive LVLMs benchmark for the insurance domain, it covers four representative insurance types: auto, property, health, and agricultural insurance and key insurance stages such as risk underwriting, risk monitoring and claim processing. INS-MMBench comprises a total of 2.2K thoroughly designed multiple-choice questions, covering 12 meta-tasks and 22 fundamental tasks.
-| ![Pyramid](Pyramid.png) | ![task_overview](task_overview.png) |
+| ![Pyramid](asset/Pyramid.png) | ![task_overview](asset/task_overview.png) |
 |-----------------------|-----------------------|
 
 ## Evaluation Results Overview
