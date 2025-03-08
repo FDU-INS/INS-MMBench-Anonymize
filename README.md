@@ -65,14 +65,3 @@ The final results will be saved in a folder named after the model used for evalu
 ## 💐 Acknowledgement
 We express our sincere gratitude to the following projects:
 - [VLMEvalKit](https://github.com/open-compass/VLMEvalKit) provides useful out-of-the-box tools and implements many advanced models. Thanks for their selfless dedication.
-
-## 🖊️ Citation 
-If you find our work useful in your project or research, please use the following BibTeX entry to cite our paper. Thanks!
-```
-@article{insmmbench,
-    title={INS-MMBench: A Comprehensive Benchmark for Evaluating LVLMs’ Performance in Insurance}, 
-    author={Lin, Chenwei and Lyu, Hanjia and Xu, Xian and Luo, Jiebo},
-    journal={arXiv preprint arXiv:2406.09105},
-    year={2024}
-}
-```
