@@ -2,21 +2,37 @@
 This repository is the official implementation of INS-MMBench: A Comprehensive Benchmark for Evaluating LVLMs' Performance in Insurance.
 
 ## Introduction
-INS-MMBench is the first comprehensive LVLMs benchmark for the insurance domain, it covers four representative insurance types: auto, property, health, and agricultural insurance and key insurance stages such as risk underwriting, risk monitoring and claim processing. This task framework consists of three layers: \textbf{fundamental task}, which focuses on the understanding of individual insurance-related visual elements; \textbf{meta-task}, which involves the compositional understanding of multiple insurance-related visual elements; and \textbf{scenario task}, which pertains to real-world insurance tasks requiring multi-step reasoning and decision-making. INS-MMBench includes a total of 11,752 images, 10,072 thoroughly designed questions (including multiple-choice visual questions and free-text visual questions), comprehensively covering 5 scenario tasks, 12 meta-tasks and 22 fundamental tasks, spanning key insurance stages such as underwriting, risk monitoring and claim processing.
+INS-MMBench is the first comprehensive LVLMs benchmark for the insurance domain, it covers four representative insurance types: auto, property, health, and agricultural insurance and key insurance stages such as risk underwriting, risk monitoring and claim processing. INS-MMBench consists of three layers task: 
+ - Fundamental task, which focuses on the understanding of individual insurance-related visual elements;
+ - Meta-task, which involves the compositional understanding of multiple insurance-related visual elements;
+ - Scenario task, which pertains to real-world insurance tasks requiring multi-step reasoning and decision-making.
+
+INS-MMBench includes a total of 11,752 images, 10,072 thoroughly designed questions (including multiple-choice visual questions and free-text visual questions), comprehensively covering 5 scenario tasks, 12 meta-tasks and 22 fundamental tasks.
 <div style="display: flex; justify-content: center;">
     <img src="asset/Pyramid.png" width="45%">
     <img src="asset/task_overview.png" width="45%">
 </div>
 
 ## Evaluation Results Overview
-Overall, GPT-4o outperforms all other models, emerging as the top-performing LVLM on the INS-MMBench with a score of 72.91. This is the only model with an overall score exceeding 70, underscoring the challenging nature of the INS-MMBench. Most LVLMs scored below 60, and some even underperformed relative to a random guess baseline of 25 in certain insurance categories, indicating significant potential for improvement in applying LVLMs within the insurance domain. Besides, we have following observations:
+Our experiments consist of two stages. In the first stage, we evaluate meta-tasks and fundamental tasks, conducting evaluation on all selected LVLMs to assess their performance in fundamental multimodal insurance tasks. In the second stage, we select a subset of top-performing models for further scenario task evaluation, where models are evaluated on end-to-end multimodal reasoning tasks to assess their effectiveness in real-world insurance applications. According to the evaluation results, we have following observations:
 
-- LVLMs show significant variance across different types of insurance.
-- LVLMs show significant variance across different meta-tasks.
-- Narrowing gap between open-source and closed-source LVLMs.
-![result](assets/result_across_insurance_type.png)
+- GPT-4o leads in performance but highlights challenges for LVLMs in insurance tasks: GPT-4o outperforms all other models with a score of **69.70**, but most LVLMs do not significantly surpass human performance across various insurance tasks, indicating substantial room for improvement in this domain.  
 
-![result](assets/result_across_meta_task.png)
+- LVLMs show significant variance across different insurance types and meta-tasks: LVLMs perform better in **auto and health insurance** tasks than in **property and agricultural insurance**, excelling in **visual perception tasks** but struggling with **knowledge-intensive reasoning tasks**, suggesting a progressive adoption strategy focused on their strengths.  
+
+- LVLMs exhibit significant limitations in complex insurance scenarios: Current LVLMs face challenges in **multi-step reasoning**, with only a few tasks exceeding **80% accuracy**, emphasizing the need for **domain-specific datasets** and **reinforcement learning** to enhance reasoning capabilities for insurance applications.  
+
+- Narrowing gap between open-source and closed-source LVLMs: While **closed-source LVLMs** still hold an advantage, some **open-source models** are approaching comparable performance, indicating that **training high-performance, domain-specific LVLMs** could be a key strategy for insurance applications.  
+
+<div style="display: flex; justify-content: center;">
+    <img src="asset/evaluation_insurance_type.png" width="30%">
+    <img src="asset/evaluation_meta_task.png" width="55%">
+</div>
+
+<div style="display: flex; justify-content: center;">
+    <img src="asset/evaluation_scenario_task.png" width="60%">
+</div>
+
 
 ## Quick start
 ### Step 1: Installation
